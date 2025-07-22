@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Welcome My Dear Dutterfly 💘</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 1.1em;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #fff;
+      color: #ff69b4;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff69b4;
+      color: #fff;
+    }
+
+    #result {
+      margin-top: 25px;
+      font-size: 1.6em;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔮 Welcome My Dear Butterfly 🦋💘</h1>
+  <p>Hey beautiful! here is somethig special for you my dabba... 😍</p>
+
+  <input type="text" id="girlName" placeholder="Enter your name" /><br>
+  <input type="date" id="dob" /><br>
+
+  <button onclick="predictHusband()">Predict Now</button>
+
+  <div id="result"></div>
+
+  <script>
+    function predictHusband() {
+      const name = document.getElementById("girlName").value.trim();
+      const dob = document.getElementById("dob").value;
+      const resultDiv = document.getElementById("result");
+
+      // Set your custom "predicted husband" name here
+      const futureHusbandName = "Raj Meshram 💖";
+
+      if (name === "" || dob === "") {
+        resultDiv.innerHTML = "Please enter your name and date of birth 💫";
+      } else {
+        resultDiv.innerHTML = `
+          Dear ${name}, born on ${dob},<br>
+          The stars say your Most Handsome future husband is...<br>
+          <strong style="font-size: 1.5em;">${futureHusbandName}</strong><br>
+          Fate has spoken ✨
+       
+          and also the your star says he is loving you more than his life. So don't lose him and ecsept his proposal to secure your futuer. Please!!         `;
+      }
+    }
+  </script>
+
+</body>
+</html>
